@@ -41,6 +41,7 @@ module.exports = function(RED) {
     // Use multer for parsing multi-part forms with fil
     var multer = require('multer');
     var upload = multer({
+        ...bodyParserConfig,
         "dest": "/tmp"
     });
     var isUtf8 = require('is-utf8');
